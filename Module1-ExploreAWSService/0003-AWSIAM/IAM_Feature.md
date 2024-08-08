@@ -26,6 +26,10 @@ An **IAM Policy** is a JSON document that defines permissions for an IAM User, G
 ### Example Use Case:
 - Assigning an IAM Policy to an IAM Group or IAM User grants them the ability to access and perform actions on AWS resources, such as EC2 instances or Amazon S3 buckets.
 
+- Architecture demo about Policy
+
+  <img align = "center" alt = "coding" width = "600" src="./Architecture/demo_IAM_Policy.jpg">
+
 ### Key Points:
 - **Granular Control:** Allows fine-tuned permission settings.
 - **Flexible Assignment:** Can be assigned to IAM Groups, Users, or Roles.
