@@ -38,6 +38,13 @@ An **IAM Policy** is a JSON document that defines permissions for an IAM User, G
 
 An **IAM Role** is a powerful feature that allows you to grant temporary access to AWS resources without sharing long-term credentials. IAM Roles can be assigned to IAM Users, AWS services, or external entities.
 
+### Example Use Case:
+
+- Architecture demo about Role
+
+  <img align = "center" alt = "coding" width = "600" src="./Architecture/demo_IAM_Role.jpg">
+
+
 ### Key Points:
 - **Temporary Access:** Useful for providing short-term permissions.
 - **Security:** Enhances security by limiting the duration of access.
