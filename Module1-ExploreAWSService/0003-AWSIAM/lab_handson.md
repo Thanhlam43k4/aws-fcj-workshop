@@ -68,6 +68,7 @@
 
 ### **K. Dat, H. Nam (in DevOps Group)**
 - **Role:** These users are part of the DevOps team responsible for managing the infrastructure and ensuring smooth deployment processes. As members of the DevOps Group, they are involved in tasks such as managing servers, networking, and automating deployment pipelines.
+  
 - **Access:** They have access to resources required for infrastructure management, including EC2 instances, S3 buckets, RDS instances, and tools like CodeDeploy and CodePipeline, enabling them to manage and maintain the environment effectively.
 
 
