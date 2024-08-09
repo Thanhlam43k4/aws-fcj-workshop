@@ -2,6 +2,8 @@
 
 ## Architecture Components
 
+<img align = "center" alt = "coding" width = "600" src="./Architecture/lab_handson.jpg">
+
 -   IAM Role:
     -    MyApp myapplication
          -    Purpose: This role is specifically designed to allow access to resources and actions related to the "myapplication" service and system
