@@ -24,10 +24,6 @@
          - Function: This group is designed for users who primarily need access to development resources. Member of this group can interact with AWS resources such as Lambda, API Gateway, DynamoDB, and S3, typically for application development and testing.
          - Permissions: The group might be linked to policies like AmazonS3FullAccess, AWSLambdaFullAccess, or custom policies that provide the necessary permissions to develop, test, and deploy code without administrative privileges.
 
--   User:
-    -   Alish
-        -   Role:# Lab Hands-On for IAM: Architecture Components
-
 ## 1. IAM Roles
 
 ### **MyApp Role**
