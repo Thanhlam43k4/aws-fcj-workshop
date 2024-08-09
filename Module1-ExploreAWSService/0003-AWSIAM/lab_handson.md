@@ -2,7 +2,6 @@
 
 ## Architecture Components
 
-<img align = "center" alt = "coding" width = "600" src="./Architecture/lab_handson.jpg">
 
 -   IAM Role:
     -    MyApp myapplication
