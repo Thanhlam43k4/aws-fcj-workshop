@@ -2,7 +2,10 @@
 
 ## Architecture Components
 
+<<<<<<< HEAD
 <img align = "center" alt = "coding" width = "600" src="./Architecture/lab_handson.jpg">
+=======
+>>>>>>> 1cefd15a43fbdd9919b47f0975f7fb1dc95e1a64
 
 -   IAM Role:
     -    MyApp myapplication
@@ -73,4 +76,11 @@
 - **Role:** These users are part of the DevOps team responsible for managing the infrastructure and ensuring smooth deployment processes. As members of the DevOps Group, they are involved in tasks such as managing servers, networking, and automating deployment pipelines.
 - **Access:** They have access to resources required for infrastructure management, including EC2 instances, S3 buckets, RDS instances, and tools like CodeDeploy and CodePipeline, enabling them to manage and maintain the environment effectively.
 
+<<<<<<< HEAD
 <img align = "center" alt = "coding" width = "600" src="./Architecture/User_List.jpg">
+=======
+        -   Access
+    -   T.Lam in Admins Group
+    -   H.Vu, Q.Viet, H.Lam are in Developers Group
+    -   K.Dat, H.Nam are in Devops Group
+>>>>>>> 1cefd15a43fbdd9919b47f0975f7fb1dc95e1a64
