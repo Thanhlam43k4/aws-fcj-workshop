@@ -17,3 +17,9 @@
 
 ## Step 6: Verify the Exported File
 ![Step 6 - Verify Exported File](./Image/Step6.png)
+
+
+**Success**: So after successfully export your Virtual Machine you can go to the next step to Import to AWS. 
+
+
+© 2024 AWS FCJ Workshop. All rights reserved.
