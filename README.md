@@ -1,6 +1,6 @@
 # AWS FCJ Workshop
 
-![AWS Logo](https://d1.awsstatic.com/logos/aws-logo-lockups/powered-by-aws/Powered-By_logo.r7a6efc1f9ec1c8003a8b9f67d27f58e0f76a6a48.png)
+![AWS Logo]('./Image/aws-logo.jpg')
 
 ## Overview
 
