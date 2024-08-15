@@ -1,6 +1,6 @@
 # AWS FCJ Workshop
 
-<img src ="./Image/aws-logo.jpg" width="45" height="45">
+<img src ="./Image/aws-logo.jpg" width="299" height="299">
 
 ## Overview
 
@@ -9,6 +9,8 @@ Welcome to the AWS FCJ Workshop! This workshop is designed to guide you through 
 ---
 
 ### Module 1 - Explore AWS Service
+
+<img src ="./Image/Module1.jpg" width="299" height="299">
 
 
 In this module, you will dive deep into various AWS services, gaining a comprehensive understanding of what AWS has to offer. From core services like EC2 and S3 to more advanced topics, this module is perfect for both beginners and experienced users looking to broaden their AWS knowledge.
