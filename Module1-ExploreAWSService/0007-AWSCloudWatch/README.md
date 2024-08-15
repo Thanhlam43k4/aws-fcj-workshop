@@ -5,11 +5,15 @@ Amazon CloudWatch is an monitor and management service that provides action-orie
 
 You can use CloudWatch Container Insights to monitor, troubleshoot, and alert the applications and microservices containerd in your containers.
 CloudWatch collects, aggregates, and summarizes compute usage (such as CPU,memory, disk,and network data) as well as diagnostic information to help Devops engineers Isolate and resolve problems quickly.
-## 🚀
+
+## 🚀 Metrics Collection
+
+-  **AWS Service Metrics**: CloudWatch automatically collects and tracks metrics for various AWS services like EC2, RDS, Lambda, DynamoDB, and more. For example, you can monitor CPU utilization, memory usage, and network traffic for your EC2 instances.
+
+- **Custom Metrics**: You can publish custom metrics from your applications or on-premises servers. These metrics can be pushed using AWS SDK, CLI, or Cloud Watch Agent.
 
 
-
-## 📊
+## ![Alt text](image.png)
 
 
 
