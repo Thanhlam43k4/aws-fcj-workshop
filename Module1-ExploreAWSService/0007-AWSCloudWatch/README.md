@@ -13,7 +13,7 @@ CloudWatch collects, aggregates, and summarizes compute usage (such as CPU,memor
 - **Custom Metrics**: You can publish custom metrics from your applications or on-premises servers. These metrics can be pushed using AWS SDK, CLI, or Cloud Watch Agent.
 
 
-## ![Alt text](image.png)
+## <img src ="./image.png" width="50" height="50">
 
 
 
