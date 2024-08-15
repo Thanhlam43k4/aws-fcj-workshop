@@ -1,6 +1,6 @@
 # AWS FCJ Workshop
 
-<img src ="./Image/aws-logo.jpg" width="299" height="299">
+<img src ="./Image/aws-logo.jpg" width="600">
 
 ## Overview
 
