@@ -44,33 +44,47 @@
 
     <img alt = "Ec2 Image" src = "./Image/Step2.png" width = "500">
 
-- Install Grafana
+- **Install Grafana**
 
     - Use can use client connect in EC2 dashboard to connect to your EC2 instance
 
     <img alt = "Ec2 Image" src = "./Image/ConnectClient.png" width = "500">
 
-    - You can install Grafana with these commands
+    - You can install Grafana with docker 
+     
+          sudo yum update -y
 
-            sudo yum update -y
+          sudo yum install docker -y
+  
+          sudo usermod -a -G docker ec2-user
 
-            sudo nano /etc/yum.repos.d/grafana.repo
+          sudo systemctl enable docker 
 
-          ####  (add the content below to the file grafana.repo)
+          sudo systemctl start docker 
 
-                [grafana]
-                name=grafana
-                baseurl=https://rpm.grafana.com
-                repo_gpgcheck=1
-                enabled=1
-                gpgcheck=1
-                gpgkey=https://rpm.grafana.com/gpg.key
-                sslverify=1
-                sslcacert=/etc/pki/tls/certs/ca-bundle.crt 
+          docker run -d -p 3000:3000 --name=grafana grafana/grafana
 
+- **Config Grafana**
 
-            sudo yum install grafana -Y
+    - Login Grafana with user and password are admin
+  
+    <img alt = "Grafana login" src = "./Image/Grafana-login.jpg" width = "500">
 
-            sudo systemctl daemon-reload
+    - Add Grafana Data sources with Cloud Watch
+  
+    <img alt = "Grafana Data Source" src = "./Image/Grafana-datasource.jpg" width = "500">
 
+    - Configure Grafana
+  
+    <img alt = "Grafana Configuration" src = "./Image/Grafana-config.jpg" width = "500">
+
+    - Edit Panel with Id Instance of EC2
+  
+    <img alt = "Grafana Panel" src = "./Image/Grafana-editPanel.jpg" width = "500">
+
+- **Result**
+
+    - The visualization of CPU Utilization of Ec2 instances in Grafana Dashboard
+
+    <img alt = "Grafana Dashboard" src = "./Image/Grafana-result.jpg" width = "500">
 
