@@ -1,90 +1,82 @@
-# Preparatory steps
-
+# Preparatory Steps
 
 ## Overview
 
--  The objective is to establish a VPC and subnet, along with a security group tailored for a **Linux Ec2 Instance**.
-  
--  Concurrently, an IAM User and IAM Role should be created.
+The objective is to establish a VPC and subnet, along with a security group tailored for a **Linux EC2 Instance**. Concurrently, an IAM User and IAM Role will be created.
 
+## Steps
 
+### 1. Create VPC and Security Group
 
-### Create VPC and Security Group
+- **VPC after creation:**
 
-- VPC after creation
+  ![VPC Image](./Image/VPC.png)
 
-    <img alt = "vpc image" src = "./Image/VPC.png" width = "500">
+- **Subnet after creation:**
 
-- Subnet after creation
+  ![Subnet Image](./Image/subnet.png)
 
-    <img alt = "Subnet Image" src = "./Image/subnet.png" width = "500">
+- **Security Group after creation:**
 
-- Security Group after creation
+  ![Security Group Image](./Image/SecurityGroup.png)
 
-    <img alt = "Security Group Image" src = "./Image/SecurityGroup.png" width = "500">
+- **IAM Role for Grafana EC2:**
 
-- IAM Role for Grafana EC2 
+  ![Grafana Role Image](./Image/GrafanaRole.png)
 
-    <img alt = "Grafana image" src = "./Image/GrafanaRole.png" width = "500">
+### 2. Create EC2 Instance
 
-### Create EC2 instance
+- **EC2 Instance after creation:**
 
-- Ec2 Instance after creation
+  ![EC2 Image](./Image/Ec2.png)
 
-    <img alt = "Ec2 Image" src = "./Image/Ec2.png" width = "500">
+- **Attach Role to EC2 Instance:**
 
-- Attach Role to Ec2 instance 
+  - At the Instances Dashboard, select your EC2 instance, click **Actions**, choose **Security**, then click **Modify IAM role**.
 
-    -  At the Instances Dashboard, click to your Ec2 instance and click **Action** choose **Security** then click **Modify IAM role**
+    ![Step 1](./Image/Step1.png)
 
-        
-    <img alt = "Ec2 Image" src = "./Image/Step1.png" width = "500">
+  - Choose `GrafanaEc2Role` and click **Update IAM Role**.
 
-    - Choose `GrafanaEc2Role` and click **Update IAM Role**
+    ![Step 2](./Image/Step2.png)
 
-    <img alt = "Ec2 Image" src = "./Image/Step2.png" width = "500">
+### 3. Install Grafana
 
-- **Install Grafana**
+- You can use **Client Connect** in the EC2 dashboard to connect to your EC2 instance.
 
-    - Use can use client connect in EC2 dashboard to connect to your EC2 instance
+  ![Connect Client](./Image/ConnectClient.png)
 
-    <img alt = "Ec2 Image" src = "./Image/ConnectClient.png" width = "500">
+- Install Grafana using Docker:
 
-    - You can install Grafana with docker 
-     
-          sudo yum update -y
+    ```bash
+    sudo yum update -y
+    sudo yum install docker -y
+    sudo usermod -a -G docker ec2-user
+    sudo systemctl enable docker
+    sudo systemctl start docker
+    docker run -d -p 3000:3000 --name=grafana grafana/grafana
+    ```
 
-          sudo yum install docker -y
-  
-          sudo usermod -a -G docker ec2-user
+### 4. Configure Grafana
 
-          sudo systemctl enable docker 
+- **Login to Grafana** with the username and password: `admin`.
 
-          sudo systemctl start docker 
+  ![Grafana Login](./Image/Grafana-login.jpg)
 
-          docker run -d -p 3000:3000 --name=grafana grafana/grafana
+- **Add Grafana Data Sources** with CloudWatch.
 
-- **Config Grafana**
+  ![Grafana Data Source](./Image/Grafana-datasource.jpg)
 
-    - Login Grafana with user and password are admin
-  
-    <img alt = "Grafana login" src = "./Image/Grafana-login.jpg" width = "500">
+- **Configure Grafana**:
 
-    - Add Grafana Data sources with Cloud Watch
-  
-    <img alt = "Grafana Data Source" src = "./Image/Grafana-datasource.jpg" width = "500">
+  ![Grafana Configuration](./Image/Grafana-config.jpg)
 
-    - Configure Grafana
-  
-    <img alt = "Grafana Configuration" src = "./Image/Grafana-config.jpg" width = "500">
+- **Edit Panel** with the EC2 Instance ID.
 
-    - Edit Panel with Id Instance of EC2
-  
-    <img alt = "Grafana Panel" src = "./Image/Grafana-editPanel.jpg" width = "500">
+  ![Grafana Panel](./Image/Grafana-editPanel.jpg)
 
-- **Result**
+### 5. Result
 
-    - The visualization of CPU Utilization of Ec2 instances in Grafana Dashboard
+- **CPU Utilization Visualization** of EC2 instances in the Grafana Dashboard.
 
-    <img alt = "Grafana Dashboard" src = "./Image/Grafana-result.jpg" width = "500">
-
+  ![Grafana Dashboard](./Image/Grafana-result.jpg)
